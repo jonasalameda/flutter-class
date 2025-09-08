@@ -72,6 +72,7 @@ class FirstVisit extends StatelessWidget {
                         color: Colors.black87
                     )
                   ),
+                  SizedBox(height: 10,)
                 ],)
               ],
             ),
@@ -83,27 +84,30 @@ class FirstVisit extends StatelessWidget {
               Column(children: [
                 ElevatedButton(onPressed: null, child: Icon(Icons.phone, color: Colors.blue)),
                 Text("CALL", style: TextStyle(color: Colors.blue),),
-                SizedBox(height: 8),
-
+                SizedBox(height: 10),
               ],),
 
               Column(children: [
                 ElevatedButton(onPressed: null, child: Icon(Icons.directions, color: Colors.blue)),
                 Text("ROUTE", style: TextStyle(color: Colors.blue)),
-                SizedBox(height: 8),
-
+                SizedBox(height: 10),
               ],),
 
               Column(children: [
                 ElevatedButton(onPressed: null, child: Icon(Icons.mail, color: Colors.blue)),
                 Text("MAIL", style: TextStyle(color: Colors.blue)),
-                SizedBox(height: 8),
+                SizedBox(height: 10),
               ],),
-
-
-
             ],
-          )],
+          ), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                  "\nProin pharetra, nunc vel interdum porta, mi risus porttitor, "
+                  "\nquis tincidunt orci enim at nisl. Nunc vitae nulla tristique, "
+                  "\nscelerisque arcu sit amet, dictum dolor. Aliquam erat volutpat."
+                  " \nDonec congue leo id dui varius ")],
+            )],
         ),
       ),
     );
