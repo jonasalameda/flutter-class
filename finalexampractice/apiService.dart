@@ -8,7 +8,7 @@ class ApiService {
   // because it can return null, put a ? after the List<UserModel>
   Future<List<Employee>?> getUsers() async {
     try {
-      var url = Uri.parse(ApiConstants.baseURL + ApiConstants.usersEndPoint);
+      var url = Uri.parse(ApiConstants.baseURL);
       var response = await http.get(url);
 
       if (response.statusCode == 200) {
@@ -16,7 +16,10 @@ class ApiService {
         return _model;
       }
     } catch(e) {
-      log(e.toString() as num);
+      print(e.toString());
+      print("ue");
+      return List<Employee>.empty();
     }
+    return List<Employee>.empty();
   }
 }
